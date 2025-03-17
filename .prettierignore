@@ -1,0 +1,28 @@
+# Ignore all files in the node_modules directory
+node_modules/
+
+# Ignore all log files
+*.log
+
+# Ignore build output directories
+dist/
+build/
+
+# Ignore coverage reports
+coverage/
+
+# Ignore environment variable files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore Prettier configuration files
+.prettierrc
+.prettierignore
+
+# Ignore any other files that should not be formatted
+*.min.js
+*.bundle.js
+*.map
