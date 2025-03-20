@@ -5,7 +5,7 @@ import { uploadOnCoudinary } from "../utils/cloudinary.js"
 import { ApiResponse } from "../utils/ApiResponse.js"
 import  jwt from "jsonwebtoken"
 import { response } from "express"
-
+import mongoose from "mongoose"
 
 
 
@@ -212,7 +212,7 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
 
 const changeCurrentPassword = asyncHandler(async (req, res) => {
     const {oldPassword, newPassword} = req.body
-
+    console.log(oldPassword, newPassword)
     const user = await User.findById(req.user._id)
     const isPasswordCorrect = await user.isPasswordCorrect(oldPassword)
 
